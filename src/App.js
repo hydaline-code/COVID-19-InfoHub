@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import FullPageLoader from './components/Loader';
 
-function App() {
+
+const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading, e.g., by fetching data or other initialization
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 7000); // Simulated loading time: 2 seconds
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {isLoading ? (
+        <FullPageLoader />
+      ) : (
+        <div>Your app content goes here</div>
+      )}
     </div>
   );
-}
+};
 
 export default App;

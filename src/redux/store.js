@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import HomeSlice from "./home/HomeSlice";
-import { createLogger } from "redux-logger"; // Import createLogger
+import { createLogger } from "redux-logger"; 
 
 const logger = createLogger(); // Create the logger middleware
 

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import FullPageLoader from './components/Loader';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckSquare } from '@fortawesome/free-solid-svg-icons';
 
 
 const App = () => {
@@ -17,7 +19,10 @@ const App = () => {
       {isLoading ? (
         <FullPageLoader />
       ) : (
-        <div>Your app content goes here</div>
+        <div>Your app content goes here
+           <FontAwesomeIcon icon={faCheckSquare} />
+        </div>
+        
       )}
     </div>
   );

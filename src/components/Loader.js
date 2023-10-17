@@ -2,7 +2,6 @@ import React from 'react';
 import { FidgetSpinner } from 'react-loader-spinner';
 import '../components/styles/Loader.css';
 
-
 const FullPageLoader = () => {
   return (
     <div className="spinner">

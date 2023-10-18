@@ -1,18 +1,22 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faSearch, faVirusCovid, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faSearch, faVialVirus, faArrowRight, faEarthAfrica } from '@fortawesome/free-solid-svg-icons';
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { getData, setDetails } from '../redux/home/HomeSlice';
 import FullPageLoader from './Loader';
+import Details from './Alldetails';
 
 
 
 const Info = ({ confirmed, deaths }) => (
   <div className="Info">
-    <h2 className="global">GLOBAL (2020 - PRESENT)</h2>
+    <h2 className="global">  <i>
+          <FontAwesomeIcon icon={faEarthAfrica} />
+        </i>
+      GLOBAL (2020 - PRESENT)</h2>
     <div className="Info-Wrapper">
       <span className="span">
         <p className="confirmed-text-home">CONFIRMED</p>
@@ -95,7 +99,7 @@ const Home = () => {
     );
     content = (
       <div className="details-row">
-        <Component
+        <Details
           date={data.rawData[indexOfData].Last_Update}
           country={data.rawData[indexOfData].Combined_Key}
           incident={parseFloat(data.rawData[indexOfData].Incident_Rate).toFixed(4)}
@@ -121,7 +125,7 @@ const Home = () => {
           <FontAwesomeIcon icon={faArrowLeft} />
         </i>
         <p className="covid-19-report">
-          <FontAwesomeIcon icon={faVirusCovid} />
+          <FontAwesomeIcon icon={faVialVirus} />
           COVID 19 REPORT
         </p>
         <span className="searchBar">

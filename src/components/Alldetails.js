@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faSkull,faPeopleArrows, faChartBar, faMask,} from '@fortawesome/free-solid-svg-icons';
+import {  faSkullCrossbones, faSkull,faPeopleArrows, faChartBar, faHeadSideMask,} from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 
 const Details = ({
@@ -18,7 +18,7 @@ const Details = ({
     <div className="statistic">
       <div className="statistic-item">
         <div className="icon">
-          <FontAwesomeIcon icon={faMask} />
+          <FontAwesomeIcon icon={faHeadSideMask} />
         </div>
         <div className="text">
           <p className="statistic-label">INCIDENT</p>
@@ -36,7 +36,7 @@ const Details = ({
       </div>
       <div className="statistic-item">
         <div className="icon">
-          <FontAwesomeIcon icon={faSkull} />
+          <FontAwesomeIcon icon={faSkullCrossbones} />
         </div>
         <div className="text">
           <p className="statistic-label">DEATH(S)</p>

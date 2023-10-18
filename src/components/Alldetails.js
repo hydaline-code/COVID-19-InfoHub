@@ -1,7 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faSkullCrossbones, faSkull,faPeopleArrows, faChartBar, faHeadSideMask,} from '@fortawesome/free-solid-svg-icons';
+import {  faSkullCrossbones,faPeopleArrows, faChartBar, faHeadSideMask,} from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
+import './styles/Alldetails.css'
 
 const Details = ({
   date,

@@ -1,13 +1,15 @@
+
+
 ::-webkit-scrollbar {
   width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #566cbd;
+  background-color: #e70983;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: white;
+  background-color: rgb(255, 123, 123);
 }
 
 .home {
@@ -22,7 +24,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: #031f45;
+  background-color: #e70983;
   align-items: center;
   padding: 20px 20px;
   justify-content: space-between;
@@ -185,12 +187,11 @@
 }
 
 .section {
-  border: 2px solid #566cbd;
-  background-color: #566cbd;
+  background-color: #e70983;
   padding: 10px;
   user-select: none;
   position: relative;
-  border-radius: 0;
+  border-radius: 2px;
   outline: none;
   transition: all 0.3s ease;
   color: white;

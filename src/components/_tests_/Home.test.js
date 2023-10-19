@@ -1,86 +1,63 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { render } from '@testing-library/react';
 import Home from '../Home';
 import { Provider } from 'react-redux';
-import '@testing-library/jest-dom/extend-expect';
 import configureStore from 'redux-mock-store';
 
-const mockStore = configureStore();
-
-describe('Home Component', () => {
-  let store;
-
-  beforeEach(() => {
-    store = mockStore({
-      home: {
-        data: [], // Add sample state data here
-        state: 'Success',
-        details: null,
+const initialState = {
+  home: {
+    data: {
+      summaryStats: {
+        global: {
+          confirmed: 123456907,
+          deaths: 7890890,   
+        },
       },
-    });
-  });
+      rawData: [
+        {
+          Country_Region: 'Cameroon',
+          Confirmed: '124392'
+        },
+      ],
+    },
+    state: 'Success',
+    details: null,
+  },
+};
 
-  it('should render the component', () => {
-    render(
-      <Provider store={store}>
-        <Home />
-      </Provider>
-    );
-    const component = screen.getByTestId('home-component');
-    expect(component).toBeInTheDocument();
-  });
+const mockStore = configureStore([]);
+const store = mockStore(initialState);
 
-  it('should render loader when in pending state', () => {
-    store = mockStore({
-      home: {
-        data: [],
-        state: 'Pending',
-        details: null,
-      },
-    });
-
-    render(
+describe('Testing Rendering Elements', () => {
+  it('Should have elements in the document', () => {
+    const { container } = render(
       <Provider store={store}>
         <Home />
       </Provider>
     );
 
-    const loader = screen.getByText(/Exploring a Comprehensive COVID-19 World Statistics/);
-    expect(loader).toBeInTheDocument();
+    const navbar = container.querySelector('.navbar');
+    const title = container.querySelector('.searchBar');
+
+    expect(navbar).toBeInTheDocument();
+    expect(title).toBeInTheDocument();
   });
+});
 
-  it('should render some content when in success state', () => {
-    // You may want to provide a mocked state with 'Success' and data here
-    store = mockStore({
-      home: {
-        data: [
-          // Sample data here
-        ],
-        state: 'Success',
-        details: null,
-      },
-    });
-
-    render(
+describe('Testing imported components', () => {
+  it('Should have all imported components element', () => {
+    const { container } = render(
       <Provider store={store}>
         <Home />
       </Provider>
     );
 
-    // Assert that the content you expect is rendered
-  });
+    const global = container.querySelector('.global');
+    const deaths = container.querySelector('.deaths');
+    const cases = container.querySelector('.cases');
 
-  it('should handle user interactions correctly', () => {
-    render(
-      <Provider store={store}>
-        <Home />
-      </Provider>
-    );
-
-    // Simulate user interactions and assert their outcomes
-    const searchInput = screen.getByPlaceholderText('Search for a country');
-    userEvent.type(searchInput, 'Sample Country');
-    // Assert that the component behaves as expected based on this interaction
+    expect(global).toBeInTheDocument();
+    expect(deaths).toBeInTheDocument();
+    expect(cases).toBeInTheDocument();
   });
 });

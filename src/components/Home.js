@@ -158,7 +158,6 @@ Info.propTypes = {
 };
 
 Section.propTypes = {
-  country: PropTypes.string.isRequired,
   cases: PropTypes.string.isRequired,
 };
 

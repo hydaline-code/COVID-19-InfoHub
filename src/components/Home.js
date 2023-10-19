@@ -1,16 +1,14 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faSearch, faVialVirus, faArrowRight, faEarthAfrica } from '@fortawesome/free-solid-svg-icons';
+import {  faSearch, faVialVirus, faArrowRight, faAngleLeft, faEarthAfrica } from '@fortawesome/free-solid-svg-icons';
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { getData, setDetails } from '../redux/home/HomeSlice';
 import FullPageLoader from './Loader';
 import Details from './Alldetails';
-import './styles/Home.css'
-
-
+import './styles/Home.css';
 
 
 const Info = ({ confirmed, deaths }) => (
@@ -18,7 +16,7 @@ const Info = ({ confirmed, deaths }) => (
     <h2 className="global">  <i>
           <FontAwesomeIcon icon={faEarthAfrica} />
         </i>
-      GLOBAL (2020 - PRESENT)</h2>
+    Global Corona-virus  Census Cases</h2>
     <div className="Info-Wrapper">
       <span className="span">
         <p className="confirmed-text-home">CONFIRMED</p>
@@ -38,15 +36,18 @@ const Section = ({ country, cases }) => {
     dispatch(setDetails(country));
   }
   return (
-    <button type="button" className="section" onClick={() => handleClick()}>
-      <i className="arrow">
+    <div  className="section" >
+      <span className='country-info'>
+      <p className="country-section-text">{country}</p>
+      <p className="cases">{cases}</p>
+      </span>
+       <button type="button" className="section-btn" onClick={() => handleClick()}>
         <i>
           <FontAwesomeIcon icon={faArrowRight} />
         </i>
-      </i>
-      <p className="country-section-text">{country}</p>
-      <p className="cases">{cases}</p>
-    </button>
+      </button>
+      
+    </div>
   );
 };
 
@@ -74,14 +75,13 @@ const Home = () => {
   }
 
   if (state === 'Success') {
-    // Render components that depend on 'data'
     content = (
-      <div className="second-row">
+        <div className="second-row">
         {data.rawData
           .slice(0, 700)
-          .filter((x) =>
-            x.Country_Region.toLowerCase().includes(searchData.toLowerCase())
-          )
+          .filter((x) => x.Country_Region.toLowerCase().includes(
+            searchData.toLowerCase(),
+          ))
           .map((item, index) => (
             <Section
               key={uuidv4()}
@@ -124,18 +124,18 @@ const Home = () => {
           onClick={handleArrowBack}
           onKeyDown={handleArrowBack}
         >
-          <FontAwesomeIcon icon={faArrowLeft} />
+          <FontAwesomeIcon icon={faAngleLeft} />
         </i>
-        <p className="covid-19-report">
+        <h3 className="covid-19-report">
           <FontAwesomeIcon icon={faVialVirus} />
-          COVID 19 REPORT
-        </p>
+          COVID-19 REPORTS
+        </h3>
         <span className="searchBar">
           <input
             type="text"
             value={searchData}
             onChange={(e) => setSearchData(e.target.value)}
-            placeholder="Search Country"
+            placeholder="Search for a country"
           />
           <i className="search-icon">
             <FontAwesomeIcon icon={faSearch} />

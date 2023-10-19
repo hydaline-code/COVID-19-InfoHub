@@ -1,96 +1,79 @@
-.span-item {
+
+.component {
+  text-align: center;
+}
+
+.country-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.statistic {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.statistic-item {
   border: 2px solid #12346d;
   padding: 20px 10px;
   background-color: #e70983;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.details-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  padding: 4px 8px;
-}
-
-.Country {
-  grid-column: 1 / -1;
-}
-
-.span-item > p {
-  font-weight: 600;
-  margin: 0;
-  font-size: 1rem;
-}
-
-.location {
-  display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  font-weight: 700;
-  font-size: 1rem;
+  margin: 10px;
 }
 
-.incident-text,
-.confirmed-text,
-.death-text,
-.ratio-text {
-  font-weight: 700;
+.statistic-item .icon {
+  font-size: 2rem;
+  margin: 5px 0;
+}
+
+.statistic-label {
+  font-weight: 600;
   font-size: 0.875rem;
 }
 
-.incident-details,
-.cases-details,
-.deaths-details,
-.ratio-details {
+.statistic-value {
   color: #a6d8e9;
-}
-
-.incident-details {
-  color: orange;
-}
-
-.icon-wrapper {
   font-size: 1.2rem;
 }
 
-.deaths-details {
-  color: red;
+.component .statistic-item:nth-child(1) {
+  border-color: #12346d;
+  background-color: #e70983;
 }
 
-.header {
-  display: flex;
-  align-items: center;
+.component .statistic-item:nth-child(2) {
+  border-color: #12346d;
+  background-color: #e70983;
 }
 
-.header > p {
-  margin: 0 10px;
+.component .statistic-item:nth-child(3) {
+  border-color: #12346d;
+  background-color: #e70983;
 }
 
-.details-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.component .statistic-item:nth-child(4) {
+  border-color: #12346d;
+  background-color: #e70983;
+}
+
+.component .statistic-item p {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0;
 }
 
 @media screen and (max-width: 375px) {
-  .details-row {
-    grid-template-columns: 1fr;
-  }
-
-  .Country {
-    grid-column: 1 / -1;
+  .statistic {
+    flex-direction: column;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .details-row {
-    grid-template-columns: repeat(3, 1fr);
-    padding: 24px;
-  }
-
-  .Country {
-    grid-column: 1 / -1;
+  .statistic {
+    flex-wrap: nowrap;
   }
 }

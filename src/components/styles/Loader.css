@@ -30,11 +30,10 @@
 } */
 
 .spinner {
-  
   color: aqua;
   border: 2px solid #000;
  background: #1f2121;
-
+ height: 100vh;
 }
 
 
@@ -57,8 +56,6 @@
 }
 
 .spinner-circle .react-loader-spinner:nth-child(1) {
-  
- background: red; 
   transform-origin: center top;
   transform: rotate(0deg);
 }
@@ -84,7 +81,25 @@
   top: 15%;
   margin-left: 20%;
   font-size: 32px;
+  margin-right: 1.5rem;
 }
 
+@media screen and (max-width: 550px) {
 
+  .title {
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+
+  .spinner-circle  {
+    height: 200px;
+    width: 200px;
+    top: 30%;
+  }
+
+
+
+ 
+   
+}
 

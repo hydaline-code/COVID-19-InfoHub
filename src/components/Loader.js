@@ -1,11 +1,10 @@
-
 import React, { useState, useEffect } from 'react';
 import { FidgetSpinner } from 'react-loader-spinner';
-import '../components/styles/Loader.css';
+import './styles/Loader.css';
 
 const FullPageLoader = () => {
   const [text, setText] = useState('');
-  const loadingText = "...Exploring a Comprehensive COVID-19 World Statistics: Cases, Deaths, and Confirmations (2020-Present)";
+  const loadingText = '...Exploring a Comprehensive COVID-19 World Statistics: Cases, Deaths, and Confirmations (2020-Present)';
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -13,13 +12,13 @@ const FullPageLoader = () => {
         if (prevText.length < loadingText.length) {
           return prevText + loadingText[prevText.length];
         }
-        clearInterval(interval); 
+        clearInterval(interval);
         return prevText;
       });
-    }, 100); 
+    }, 100);
 
     return () => {
-      clearInterval(interval); 
+      clearInterval(interval);
     };
   }, []);
 

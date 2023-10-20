@@ -1,8 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Details from '../Alldetails'; // Adjust the import path
+import Details from '../Alldetails';
 
-// Sample data for testing
 const sampleData = {
   date: '2023-10-16',
   country: 'Sample Country',
@@ -14,7 +13,16 @@ const sampleData = {
 
 describe('Details Component', () => {
   it('should render the component with provided data', () => {
-    const { getByText } = render(<Details {...sampleData} />);
+    const { getByText } = render(
+      <Details
+        date={sampleData.date}
+        country={sampleData.country}
+        incident={sampleData.incident}
+        cases={sampleData.cases}
+        deaths={sampleData.deaths}
+        ratio={sampleData.ratio}
+      />,
+    );
     const countryName = getByText(/Sample Country/);
     const incidentValue = getByText('123');
     const casesValue = getByText('456');
@@ -31,14 +39,32 @@ describe('Details Component', () => {
   });
 
   it('should display correct icons', () => {
-    const { container } = render(<Details {...sampleData} />);
+    const { container } = render(
+      <Details
+        date={sampleData.date}
+        country={sampleData.country}
+        incident={sampleData.incident}
+        cases={sampleData.cases}
+        deaths={sampleData.deaths}
+        ratio={sampleData.ratio}
+      />,
+    );
     const iconElements = container.querySelectorAll('.icon');
 
-    expect(iconElements).toHaveLength(4); // Ensure there are 4 icon elements
+    expect(iconElements).toHaveLength(4);
   });
 
   it('should display correct labels and values', () => {
-    const { getByText } = render(<Details {...sampleData} />);
+    const { getByText } = render(
+      <Details
+        date={sampleData.date}
+        country={sampleData.country}
+        incident={sampleData.incident}
+        cases={sampleData.cases}
+        deaths={sampleData.deaths}
+        ratio={sampleData.ratio}
+      />,
+    );
     const incidentLabel = getByText('INCIDENT');
     const casesLabel = getByText('CONFIRMED');
     const deathsLabel = getByText('DEATH(S)');
@@ -49,5 +75,4 @@ describe('Details Component', () => {
     expect(deathsLabel).toBeInTheDocument();
     expect(ratioLabel).toBeInTheDocument();
   });
-
 });

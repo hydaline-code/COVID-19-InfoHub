@@ -174,7 +174,7 @@
 
 .confirmed,
 .deaths {
-  color: #66ff44;
+  color: #6f4;
   font-weight: 600;
   margin: 0;
   font-size: 20px;
@@ -209,7 +209,6 @@
   outline: none;
   transition: all 0.3s ease;
   color: white;
-
 }
 
 .section-btn {
@@ -324,5 +323,3 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
-

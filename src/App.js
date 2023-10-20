@@ -1,10 +1,8 @@
-
 import React, { useState, useEffect } from 'react';
-import FullPageLoader from './components/Loader';
 import { useDispatch, useSelector } from 'react-redux';
-import {  getData } from './redux/home/HomeSlice';
+import FullPageLoader from './components/Loader';
+import { getData } from './redux/home/HomeSlice';
 import Home from './components/Home';
-
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,23 +21,21 @@ const App = () => {
 
   return (
 
-  
     <div className="app">
-      
+
       {isLoading ? (
         <FullPageLoader />
-      
+
       )
-     : (
-        <div>
-          <Home />
-        </div>
-        
-      )}
+        : (
+          <div>
+            <Home />
+          </div>
+
+        )}
     </div>
-  
+
   );
 };
 
 export default App;
-

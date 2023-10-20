@@ -2,24 +2,24 @@
 .spinner {
   color: aqua;
   border: 2px solid #000;
- background: #1f2121;
- height: 100vh;
+  background: #1f2121;
+  height: 100vh;
 }
-
 
 .spinner-circle {
   position: relative;
   top: 15%;
   width: 200px;
- height: 200px;
- margin: 17% auto;
- animation: rotate 3s linear infinite;
+  height: 200px;
+  margin: 17% auto;
+  animation: rotate 3s linear infinite;
 }
 
 @keyframes rotate {
   0% {
     transform: rotate(0);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -55,21 +55,14 @@
 }
 
 @media screen and (max-width: 550px) {
-
   .title {
     font-size: 1rem;
     margin-right: 1rem;
   }
 
-  .spinner-circle  {
+  .spinner-circle {
     height: 200px;
     width: 200px;
     top: 30%;
   }
-
-
-
- 
-   
 }
-

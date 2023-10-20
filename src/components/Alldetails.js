@@ -1,8 +1,10 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faSkullCrossbones,faPeopleArrows, faChartBar, faHeadSideMask,} from '@fortawesome/free-solid-svg-icons';
+import {
+  faSkullCrossbones, faPeopleArrows, faChartBar, faHeadSideMask,
+} from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
-import './styles/Alldetails.css'
+import './styles/Alldetails.css';
 
 const Details = ({
   date,
@@ -14,7 +16,11 @@ const Details = ({
 }) => (
   <div className="component">
     <h2 className="country-name">
-      {country} ({date.slice(0, 10)})
+      {country}
+      {' '}
+      (
+      {date.slice(0, 10)}
+      )
     </h2>
     <div className="statistic">
       <div className="statistic-item">

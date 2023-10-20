@@ -1,12 +1,11 @@
-
-
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  data: [ ],
+  data: [],
   state: null,
   details: null,
 };
+const transformData = (rawData) => rawData;
 
 const HomeSlice = createSlice({
   name: 'Home',
@@ -19,7 +18,7 @@ const HomeSlice = createSlice({
     fetchDataSuccess: (state, { payload }) => ({
       ...state,
       state: 'Success',
-      data: transformData(payload), 
+      data: transformData(payload),
     }),
     fetchDataError: (state, { payload }) => ({
       ...state,
@@ -32,10 +31,6 @@ const HomeSlice = createSlice({
   },
 });
 
-const transformData = (rawData) => {
-  return rawData;
-};
-
 export const {
   fetchDataRequest,
   fetchDataSuccess,
@@ -46,20 +41,18 @@ export const {
 const api = 'https://coronavirus.m.pipedream.net/';
 
 const getData = () => async (dispatch) => {
-  console.log('Fetching data...'); 
   dispatch(fetchDataRequest());
 
   try {
-    const response = await fetch(api); 
+    const response = await fetch(api);
     if (response.ok) {
-      const data = await response.json(); 
-     
+      const data = await response.json();
+
       dispatch(fetchDataSuccess(data));
     } else {
       throw new Error(`Request failed with status: ${response.status}`);
     }
   } catch (error) {
-    
     dispatch(fetchDataError(error.message));
   }
 };
@@ -67,4 +60,3 @@ const getData = () => async (dispatch) => {
 export { getData };
 
 export default HomeSlice.reducer;
-

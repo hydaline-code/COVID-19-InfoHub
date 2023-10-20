@@ -1,7 +1,8 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faSearch, faVialVirus, faArrowRight, faAngleLeft, faEarthAfrica } from '@fortawesome/free-solid-svg-icons';
+import {
+  faSearch, faVialVirus, faArrowRight, faAngleLeft, faEarthAfrica,
+} from '@fortawesome/free-solid-svg-icons';
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
@@ -10,13 +11,15 @@ import FullPageLoader from './Loader';
 import Details from './Alldetails';
 import './styles/Home.css';
 
-
 const Info = ({ confirmed, deaths }) => (
   <div className="Info">
-    <h2 className="global">  <i>
-          <FontAwesomeIcon icon={faEarthAfrica} />
-        </i>
-    Global Corona-virus  Census Cases</h2>
+    <h2 className="global">
+      {' '}
+      <i>
+        <FontAwesomeIcon icon={faEarthAfrica} />
+      </i>
+      Global Corona-virus  Census Cases
+    </h2>
     <div className="Info-Wrapper">
       <span className="span">
         <p className="confirmed-text-home">CONFIRMED</p>
@@ -36,17 +39,17 @@ const Section = ({ country, cases }) => {
     dispatch(setDetails(country));
   }
   return (
-    <div  className="section" >
-      <span className='country-info'>
-      <p className="country-section-text">{country}</p>
-      <p className="cases">{cases}</p>
+    <div className="section">
+      <span className="country-info">
+        <p className="country-section-text">{country}</p>
+        <p className="cases">{cases}</p>
       </span>
-       <button type="button" className="section-btn" onClick={() => handleClick()}>
+      <button type="button" className="section-btn" onClick={() => handleClick()}>
         <i>
           <FontAwesomeIcon icon={faArrowRight} />
         </i>
       </button>
-      
+
     </div>
   );
 };
@@ -76,7 +79,7 @@ const Home = () => {
 
   if (state === 'Success') {
     content = (
-        <div className="second-row">
+      <div className="second-row">
         {data.rawData
           .slice(0, 700)
           .filter((x) => x.Country_Region.toLowerCase().includes(
@@ -97,7 +100,7 @@ const Home = () => {
   if (state === 'Success' && details !== null && arrowBack.current !== null) {
     arrowBack.current.style.display = 'block';
     const indexOfData = data.rawData.findIndex(
-      (obj) => obj.Combined_Key === details
+      (obj) => obj.Combined_Key === details,
     );
     content = (
       <div className="details-row">
@@ -151,16 +154,14 @@ const Home = () => {
   );
 };
 
-
 Info.propTypes = {
   confirmed: PropTypes.number.isRequired,
   deaths: PropTypes.number.isRequired,
 };
 
 Section.propTypes = {
+  country: PropTypes.string.isRequired,
   cases: PropTypes.string.isRequired,
 };
 
 export default Home;
-
-

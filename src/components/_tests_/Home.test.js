@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Home from '../Home';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
+import Home from '../Home';
 
 const initialState = {
   home: {
@@ -10,13 +10,13 @@ const initialState = {
       summaryStats: {
         global: {
           confirmed: 123456907,
-          deaths: 7890890,   
+          deaths: 7890890,
         },
       },
       rawData: [
         {
           Country_Region: 'Cameroon',
-          Confirmed: '124392'
+          Confirmed: '124392',
         },
       ],
     },
@@ -33,7 +33,7 @@ describe('Testing Rendering Elements', () => {
     const { container } = render(
       <Provider store={store}>
         <Home />
-      </Provider>
+      </Provider>,
     );
 
     const navbar = container.querySelector('.navbar');
@@ -49,7 +49,7 @@ describe('Testing imported components', () => {
     const { container } = render(
       <Provider store={store}>
         <Home />
-      </Provider>
+      </Provider>,
     );
 
     const global = container.querySelector('.global');

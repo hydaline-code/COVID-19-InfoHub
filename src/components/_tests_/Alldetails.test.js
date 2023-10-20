@@ -1,7 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Details from '../Alldetails';
+import '@testing-library/jest-dom';
+import Details from '../Alldetails'; // Adjust the impor
 
+// Sample data for testing
 const sampleData = {
   date: '2023-10-16',
   country: 'Sample Country',
@@ -51,7 +53,7 @@ describe('Details Component', () => {
     );
     const iconElements = container.querySelectorAll('.icon');
 
-    expect(iconElements).toHaveLength(4);
+    expect(iconElements).toHaveLength(4); // Ensure there are 4 icon elements
   });
 
   it('should display correct labels and values', () => {
@@ -65,6 +67,7 @@ describe('Details Component', () => {
         ratio={sampleData.ratio}
       />,
     );
+
     const incidentLabel = getByText('INCIDENT');
     const casesLabel = getByText('CONFIRMED');
     const deathsLabel = getByText('DEATH(S)');

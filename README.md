@@ -1,70 +1,183 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
+  <br/>
 
-## Available Scripts
+  <h3><b>CAPSTONE -COVID-19 REPORTS</b></h3>
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+<!-- TABLE OF CONTENTS -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 📗 Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 React-Capstone Application ](#-react-list-application-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
-### `npm test`
+<!-- PROJECT DESCRIPTION -->
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 📖 Corona Virus  Project <a name="health-project"></a>
 
-### `npm run build`
+**COVID-19 InfoHub** is a web application that provides up-to-date information on the COVID-19 pandemic, including global and country-specific data. Users can view statistics, search for countries, and access detailed information for each country.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠 Built With <a name="built-with"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img
+      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+      alt="react" width="60" height="60" />
+      
+      A popular JavaScript library for building user interfaces. </a>
+<a href='https://redux.js.org'><img src='https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67' height='60' alt='Redux Logo' aria-label='redux.js.org' /> 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    Redux a statemanagement library for managing application state. </a>
 
-### `npm run eject`
+  -  Device Emulator: A tool to simulate the app's appearance on various devices.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- FontAwesome: A library for adding scalable vector icons to your app.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Tech Stack <a name="tech-stack"></a>
+- [React](https://react.dev/learn/installation/)
+ - [Redux](https://redux.js.org/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Key Features <a name="key-features"></a>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Real-time Data: Get access to the latest    COVID-19 statistics, including confirmed cases, deaths, and more.
+- Global and Country Data: View global statistics as well as country-specific information.
+- Mobile-Friendly: The app is responsive and mobile-friendly, ensuring a seamless experience on various devices.
 
-## Learn More
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🚀 Live Demo <a name="live-demo"></a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[Link](https://covid19-reports.netlify.app/)
 
-### Code Splitting
+## Presentation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[Link to my presentation](https://www.loom.com/share/990d54b431574628856ac35340f68900)
 
-### Analyzing the Bundle Size
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 💻 Getting Started <a name="getting-started"></a>
 
-### Making a Progressive Web App
+To get a local copy up and running, follow these steps.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Prerequisites
 
-### Advanced Configuration
+In order to run this project you need:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- An npm installed on your syatem.
+
+#### Windows
+
+[Visit the link to download the package](https://nodejs.org/dist/v18.15.0/node-v18.15.0-x86.msi)
+
+#### Linux
+
+```sh
+ sudo apt install nodejs
+```
+
+#### MacOS
+
+[Visit the link to download the package](https://nodejs.org/dist/v18.15.0/node-v18.15.0.pkg)
+
+### Setup
+
+Clone this repository to your desired folder:
+
+```sh
+  git clone https://github.com/hydaline-code/covid-19Infohub
+```
+
+### Install
+
+Install this project with:
+
+```sh
+  npm install
+```
+
+### Running Tests
+
+To to test the project, checkout [Jest](https://jestjs.io/)
+
+```sh
+npm install jest --save-dev
+```
+
+Then, to start the test:
+
+```sh
+  npm run test
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+```sh
+  npm run dev
+```
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The project will be deployed soon.
 
-### `npm run build` fails to minify
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Hydaline djoungang**
+- [GitHub](https://github.com/hydaline-code)
+- [LinkedIn](https://www.linkedin.com/in/hydaline-djougang-0851aa21a/)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- **[UI enhancemets is coming soon.]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
+- Inspiration
+- Thanks to Microverse
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
+
+

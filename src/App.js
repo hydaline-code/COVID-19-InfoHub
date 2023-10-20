@@ -1,7 +1,5 @@
 
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckSquare } from '@fortawesome/free-solid-svg-icons';
 import FullPageLoader from './components/Loader';
 import { useDispatch, useSelector } from 'react-redux';
 import {  getData } from './redux/home/HomeSlice';
@@ -24,21 +22,22 @@ const App = () => {
   }, [dataState]);
 
   return (
-    <div className="app">
 
+  
+    <div className="app">
+      
       {isLoading ? (
         <FullPageLoader />
       
       )
      : (
         <div>
-          <FontAwesomeIcon icon={faCheckSquare} />
-          Your data is been fetched sucessfully
           <Home />
         </div>
         
       )}
     </div>
+  
   );
 };
 

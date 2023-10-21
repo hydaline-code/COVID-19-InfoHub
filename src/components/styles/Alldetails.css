@@ -18,7 +18,7 @@
 .statistic-item {
   border: 2px solid #12346d;
   padding: 20px 10px;
-  background-color: #e70983;
+  background-color: #fc5193;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -42,22 +42,22 @@
 
 .component .statistic-item:nth-child(1) {
   border-color: #12346d;
-  background-color: #e70983;
+  background-color: #fc5193;
 }
 
 .component .statistic-item:nth-child(2) {
   border-color: #12346d;
-  background-color: #e70983;
+  background-color: #fc5193;
 }
 
 .component .statistic-item:nth-child(3) {
   border-color: #12346d;
-  background-color: #e70983;
+  background-color: #fc5193;
 }
 
 .component .statistic-item:nth-child(4) {
   border-color: #12346d;
-  background-color: #e70983;
+  background-color: #fc5193;
 }
 
 .component .statistic-item p {

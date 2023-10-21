@@ -23,7 +23,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: #e70983;
+  background-color:  #fc5193;
   align-items: center;
   padding: 20px 20px;
   justify-content: space-between;
@@ -119,7 +119,7 @@
 }
 
 .Info {
-  background-color: #e70983;
+  background-color: #fc5193;
   margin: 70px 8px 4px 8px;
   padding: 10px 20px;
   position: relative;
@@ -201,7 +201,6 @@
 .section {
   display: flex;
   justify-content: space-between;
-  background-color: #e70983;
   padding: 10px;
   user-select: none;
   position: relative;
@@ -209,6 +208,23 @@
   outline: none;
   transition: all 0.3s ease;
   color: white;
+  background-color: #fc5193;
+}
+
+.section:nth-child(2n) {
+  background-color: #fc5193;
+}
+
+.section:nth-child(2n+1) {
+  background-color: rgba(234, 72, 134, 0.9)
+}
+
+.section:nth-child(4n), .section:nth-child(4n+1) {
+  background-color: #fc5193; 
+}
+
+.section:nth-child(4n+2), .section:nth-child(4n+3) {
+  background-color: rgba(234, 72, 134, 0.9)
 }
 
 .section-btn {
@@ -270,6 +286,7 @@
   .covid-19-report {
     font-size: 12px;
   }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -322,4 +339,5 @@
   .second-row {
     grid-template-columns: repeat(4, 1fr);
   }
+
 }

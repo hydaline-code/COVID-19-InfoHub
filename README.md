@@ -176,8 +176,11 @@ Give a ⭐️ if you like this project!
 - Inspiration
 - Thanks to Microverse
 
-## 📝 License
+## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT-LICENSE](https://github.com/hydaline-code/space-travelers-hub/blob/dev/LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 

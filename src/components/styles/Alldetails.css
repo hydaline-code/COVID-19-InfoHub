@@ -17,12 +17,12 @@
 
 .statistic-item {
   border: 2px solid #12346d;
-  padding: 20px 10px;
   background-color: #fc5193;
   display: flex;
   align-items: center;
   flex-direction: column;
   margin: 10px;
+  width: 90%;
 }
 
 .statistic-item .icon {
@@ -40,24 +40,19 @@
   font-size: 1.2rem;
 }
 
-.component .statistic-item:nth-child(1) {
+.component .statistic-item:nth-child(2n-1) {
   border-color: #12346d;
   background-color: #fc5193;
 }
 
-.component .statistic-item:nth-child(2) {
+.component .statistic-item:nth-child(2n+2) {
   border-color: #12346d;
-  background-color: #fc5193;
-}
-
-.component .statistic-item:nth-child(3) {
-  border-color: #12346d;
-  background-color: #fc5193;
+  background-color: #e13879;
 }
 
 .component .statistic-item:nth-child(4) {
   border-color: #12346d;
-  background-color: #fc5193;
+  background-color: #e13879;
 }
 
 .component .statistic-item p {
@@ -66,14 +61,16 @@
   margin: 0;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 550px) {
   .statistic {
     flex-direction: column;
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 768px) {
   .statistic {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 }

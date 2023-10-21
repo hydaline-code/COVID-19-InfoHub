@@ -65,7 +65,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Link](https://covid19-reports.netlify.app/)
+[Link](https://dev--grand-beignet-763e0c.netlify.app/)
 
 ## Presentation
 

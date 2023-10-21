@@ -1,0 +1,76 @@
+
+.component {
+  text-align: center;
+}
+
+.country-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.statistic {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.statistic-item {
+  border: 2px solid #12346d;
+  background-color: #fc5193;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+  width: 90%;
+}
+
+.statistic-item .icon {
+  font-size: 2rem;
+  margin: 5px 0;
+}
+
+.statistic-label {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.statistic-value {
+  color: #a6d8e9;
+  font-size: 1.2rem;
+}
+
+.component .statistic-item:nth-child(2n-1) {
+  border-color: #12346d;
+  background-color: #fc5193;
+}
+
+.component .statistic-item:nth-child(2n+2) {
+  border-color: #12346d;
+  background-color: #e13879;
+}
+
+.component .statistic-item:nth-child(4) {
+  border-color: #12346d;
+  background-color: #e13879;
+}
+
+.component .statistic-item p {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+@media screen and (max-width: 550px) {
+  .statistic {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .statistic {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}

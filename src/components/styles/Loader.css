@@ -1,0 +1,68 @@
+
+.spinner {
+  color: aqua;
+  border: 2px solid #000;
+  background: #1f2121;
+  height: 100vh;
+}
+
+.spinner-circle {
+  position: relative;
+  top: 15%;
+  width: 200px;
+  height: 200px;
+  margin: 17% auto;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-circle .react-loader-spinner:nth-child(1) {
+  transform-origin: center top;
+  transform: rotate(0deg);
+}
+
+.spinner-circle .react-loader-spinner:nth-child(2) {
+  position: absolute;
+  top: 10%;
+  left: 60%;
+  transform-origin: center bottom;
+  transform: rotate(72deg);
+}
+
+.spinner-circle .react-loader-spinner:nth-child(3) {
+  position: absolute;
+  top: 20%;
+  left: 70%;
+  transform-origin: center bottom;
+  transform: rotate(144deg);
+}
+
+.title {
+  position: absolute;
+  top: 15%;
+  margin-left: 20%;
+  font-size: 32px;
+  margin-right: 1.5rem;
+}
+
+@media screen and (max-width: 550px) {
+  .title {
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+
+  .spinner-circle {
+    height: 200px;
+    width: 200px;
+    top: 30%;
+  }
+}

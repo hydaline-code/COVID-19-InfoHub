@@ -23,7 +23,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color:  #fc5193;
+  background-color: #fc5193;
   align-items: center;
   padding: 20px 20px;
   justify-content: space-between;
@@ -216,15 +216,17 @@
 }
 
 .section:nth-child(2n+1) {
-  background-color: rgba(234, 72, 134, 0.9)
+  background-color: rgba(234, 72, 134, 0.9);
 }
 
-.section:nth-child(4n), .section:nth-child(4n+1) {
-  background-color: #fc5193; 
+.section:nth-child(4n),
+.section:nth-child(4n+1) {
+  background-color: #fc5193;
 }
 
-.section:nth-child(4n+2), .section:nth-child(4n+3) {
-  background-color: rgba(234, 72, 134, 0.9)
+.section:nth-child(4n+2),
+.section:nth-child(4n+3) {
+  background-color: rgba(234, 72, 134, 0.9);
 }
 
 .section-btn {
@@ -286,7 +288,6 @@
   .covid-19-report {
     font-size: 12px;
   }
-
 }
 
 @media screen and (min-width: 768px) {
@@ -339,5 +340,4 @@
   .second-row {
     grid-template-columns: repeat(4, 1fr);
   }
-
 }
